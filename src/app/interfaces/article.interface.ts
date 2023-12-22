@@ -1,4 +1,5 @@
 export interface IArticle {
+  id: number;
   artist: string;
   city: string;
   date: string;

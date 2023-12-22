@@ -9,6 +9,7 @@ import { ArticlesService } from "./services/articles.service";
 })
 export class AppComponent {
   articles: IArticle[] = [];
+  categories: string[] = [];
 
   constructor(private _articleSvc: ArticlesService) {}
 
@@ -17,9 +18,17 @@ export class AppComponent {
   }
 
   loadArticles(): void {
-    this._articleSvc
-      .getArticles()
-      .subscribe((articles: IArticle[]) => (this.articles = articles));
+    this._articleSvc.getArticles().subscribe((articles: IArticle[]) => {
+      this.articles = articles;
+      this.loadCategories();
+    });
+  }
+
+  loadCategories(): void {
+    this.categories = [
+      "All",
+      ...new Set(this.articles.map((article: IArticle) => article.category))
+    ];
   }
 
   search(filters: IFormFilter): void {

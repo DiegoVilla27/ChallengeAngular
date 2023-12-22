@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { IFormFilter } from "../../interfaces/article.interface";
 
@@ -8,6 +8,7 @@ import { IFormFilter } from "../../interfaces/article.interface";
   styleUrl: "./filter.component.scss"
 })
 export class FilterComponent {
+  @Input() categories: string[] = [];
   @Output() filter: EventEmitter<IFormFilter> = new EventEmitter<IFormFilter>();
   form!: FormGroup;
 
@@ -25,6 +26,8 @@ export class FilterComponent {
   }
 
   search(): void {
+    if (this.form.value["category"] === "All")
+      this.form.patchValue({ category: "" });
     this.filter.emit(this.form.value);
   }
 }

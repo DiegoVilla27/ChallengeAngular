@@ -1,3 +1,3 @@
-<app-filter (filter)="search($event)"></app-filter>
+<app-filter (filter)="search($event)" [categories]='categories'></app-filter>
 
 <app-article-card *ngFor='let article of articles' [article]='article'></app-article-card>

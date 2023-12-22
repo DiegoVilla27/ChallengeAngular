@@ -2,6 +2,9 @@
   <input formControlName='artist' type='text' placeholder='Artist'/>
   <input formControlName='city' type='text' placeholder='City'/>
   <input formControlName='date' type='date' placeholder='Date'/>
-  <input formControlName='category' type='text' placeholder='Category'/>
+  <select formControlName='category'>
+    <option value="" disabled selected hidden>Category</option>
+    <option *ngFor='let category of categories' [value]="category">{{category}}</option>
+  </select>
   <button type='submit' (click)="search()">Search</button>
 </form>

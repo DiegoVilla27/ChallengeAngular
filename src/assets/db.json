@@ -29,7 +29,7 @@
       "city": "Paris",
       "date": "2022-08-05",
       "price": 120,
-      "category": "R&B",
+      "category": "Jazz",
       "id": 4
     },
     {
@@ -61,7 +61,7 @@
       "city": "Berlin",
       "date": "2022-12-05",
       "price": 140,
-      "category": "R&B",
+      "category": "Jazz",
       "id": 8
     },
     {
@@ -81,10 +81,10 @@
       "id": 10
     },
     {
-      "artist": "Kendrick Lamar",
+      "artist": "Eminem",
       "city": "Chicago",
-      "date": "2023-02-10",
-      "price": 120,
+      "date": "2023-02-12",
+      "price": 150,
       "category": "Hip Hop",
       "id": 11
     }
