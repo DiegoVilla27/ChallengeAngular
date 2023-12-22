@@ -1,3 +1,14 @@
-<div>
-  <p>{{article.artist}}</p>
-</div>
+<article class='article'>
+  <img class='article_img' [src]="IMAGE_NOTFOUND" />
+  <div class='article_box'>
+    <h4>{{ article.artist }}</h4>
+    <p><img [src]="ICON_LOCATION" /> {{ article.city }}</p>
+    <div class='article_box_actions'>
+      <div class='article_box_actions_price'>
+        <p>Desde</p>
+        <p>{{ article.price | currency:'EUR':'symbol':'0.0-0' }}</p>
+      </div>
+      <button class='article_box_actions_button' type="button">Quiero ir</button>
+    </div>
+  </div>
+</article>

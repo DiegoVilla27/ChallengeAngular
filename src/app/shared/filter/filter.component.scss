@@ -36,7 +36,7 @@
     }
 
     button {
-      @include button;
+      @include button($red500, 18px);
     }
 
     .select {
@@ -55,6 +55,21 @@
       position: relative;
       img {
         @include image;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filter-box {
+    height: 100%;
+    form {
+      flex-direction: column;
+      input,
+      .input,
+      .select select,
+      button {
+        height: 37px;
       }
     }
   }

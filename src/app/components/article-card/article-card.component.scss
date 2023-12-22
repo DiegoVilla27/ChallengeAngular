@@ -1,0 +1,48 @@
+@import "../../../assets/scss/variables/colors";
+@import "../../../assets/scss/mixins/buttons";
+
+.article {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  &_img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &_box {
+    padding: 1rem;
+    h4 {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    & > p {
+      font-size: 12px;
+      img {
+        width: 18px;
+      }
+    }
+
+    &_actions {
+      align-items: end;
+      display: flex;
+      justify-content: space-between;
+
+      &_price {
+        p {
+          margin: 0px;
+          &:first-child {
+            font-size: 10px;
+            text-transform: uppercase;
+          }
+          &:last-child {
+            color: $red500;
+            font-size: 25px;
+          }
+        }
+      }
+
+      &_button {
+        @include button($gray800, 14px);
+      }
+    }
+  }
+}

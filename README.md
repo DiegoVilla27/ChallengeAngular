@@ -7,7 +7,7 @@ Npm - Version 10.1.0
 ## Development server and API (JSON Server)
 
 Run `ng serve` for a dev server and navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-Run `json-server --watch src/assets/db.json` for a server to API REST. URL: `http://localhost:3000`
+Run `json-server --watch src/assets/db.json` for a server to API REST. URL: `http://localhost:3000` (You need library global: npm i -g json-server)
 
 ## Commits
 

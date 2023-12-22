@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint:commit": "npx lint-staged",
-    "pretier": "prettier . --write"
+    "pretier": "prettier . --write",
+    "api:watch": "json-server --watch src/assets/db.json"
   },
   "private": true,
   "dependencies": {

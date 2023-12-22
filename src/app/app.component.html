@@ -1,3 +1,9 @@
 <app-filter (filter)="search($event)" [categories]='categories'></app-filter>
 
-<app-article-card *ngFor='let article of articles' [article]='article'></app-article-card>
+<div class='my-4 mx-3'>
+  <div class='row w-100 g-4 ms-0'>
+    <div class='col-12 col-sm-6 col-md-4 col-lg-3' *ngFor='let article of articles'>
+      <app-article-card [article]='article'></app-article-card>
+    </div>
+  </div>
+</div>
