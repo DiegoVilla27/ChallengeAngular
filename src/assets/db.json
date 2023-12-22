@@ -1,0 +1,92 @@
+{
+  "articles": [
+    {
+      "artist": "John Mayer",
+      "city": "New York",
+      "date": "2022-05-15",
+      "price": 100,
+      "category": "Pop",
+      "id": 1
+    },
+    {
+      "artist": "Taylor Swift",
+      "city": "Los Angeles",
+      "date": "2022-06-10",
+      "price": 150,
+      "category": "Pop",
+      "id": 2
+    },
+    {
+      "artist": "Ed Sheeran",
+      "city": "London",
+      "date": "2022-07-20",
+      "price": 80,
+      "category": "Pop",
+      "id": 3
+    },
+    {
+      "artist": "Beyonce",
+      "city": "Paris",
+      "date": "2022-08-05",
+      "price": 120,
+      "category": "R&B",
+      "id": 4
+    },
+    {
+      "artist": "Coldplay",
+      "city": "Tokyo",
+      "date": "2022-09-15",
+      "price": 90,
+      "category": "Rock",
+      "id": 5
+    },
+    {
+      "artist": "Ariana Grande",
+      "city": "Sydney",
+      "date": "2022-10-10",
+      "price": 130,
+      "category": "Pop",
+      "id": 6
+    },
+    {
+      "artist": "Drake",
+      "city": "Toronto",
+      "date": "2022-11-20",
+      "price": 110,
+      "category": "Hip Hop",
+      "id": 7
+    },
+    {
+      "artist": "Rihanna",
+      "city": "Berlin",
+      "date": "2022-12-05",
+      "price": 140,
+      "category": "R&B",
+      "id": 8
+    },
+    {
+      "artist": "Bruno Mars",
+      "city": "Las Vegas",
+      "date": "2023-01-15",
+      "price": 95,
+      "category": "Pop",
+      "id": 9
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "city": "Chicago",
+      "date": "2023-02-10",
+      "price": 120,
+      "category": "Hip Hop",
+      "id": 10
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "city": "Chicago",
+      "date": "2023-02-10",
+      "price": 120,
+      "category": "Hip Hop",
+      "id": 11
+    }
+  ]
+}

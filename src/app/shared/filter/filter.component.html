@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+  <input formControlName='artist' type='text' placeholder='Artist'/>
+  <input formControlName='city' type='text' placeholder='City'/>
+  <input formControlName='date' type='date' placeholder='Date'/>
+  <input formControlName='category' type='text' placeholder='Category'/>
+  <button type='submit' (click)="search()">Search</button>
+</form>
