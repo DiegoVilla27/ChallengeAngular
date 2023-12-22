@@ -1,0 +1,9 @@
+@mixin input {
+  background-color: white;
+  border: 1px solid $gray400;
+  color: $gray600;
+  font-size: 14px;
+  height: 100%;
+  padding: 0px 10px;
+  width: 100%;
+}

@@ -1,0 +1,7 @@
+@mixin button {
+  background-color: $red500;
+  border: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+}

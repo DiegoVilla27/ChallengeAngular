@@ -1,0 +1,61 @@
+@import "../../../assets/scss/variables/colors";
+@import "../../../assets/scss/mixins/buttons";
+@import "../../../assets/scss/mixins/inputs";
+
+@mixin image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 15px;
+}
+
+.filter-box {
+  background-color: $gray300;
+  height: 100px;
+  padding: 2rem;
+  width: 100%;
+
+  form {
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+    justify-content: center;
+
+    input,
+    .input,
+    .select,
+    button {
+      flex: 1;
+      height: 100%;
+    }
+
+    input,
+    .select select {
+      @include input;
+    }
+
+    button {
+      @include button;
+    }
+
+    .select {
+      position: relative;
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      img {
+        @include image;
+      }
+    }
+
+    .input {
+      position: relative;
+      img {
+        @include image;
+      }
+    }
+  }
+}

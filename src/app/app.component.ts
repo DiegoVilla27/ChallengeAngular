@@ -26,7 +26,7 @@ export class AppComponent {
 
   loadCategories(): void {
     this.categories = [
-      "All",
+      "Todos",
       ...new Set(this.articles.map((article: IArticle) => article.category))
     ];
   }
