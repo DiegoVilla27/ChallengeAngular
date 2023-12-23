@@ -1,3 +1,4 @@
+<app-language></app-language>
 <app-filter (filter)="search($event)" [categories]='categories'></app-filter>
 
 <div class='my-4 mx-3'>
@@ -6,7 +7,7 @@
       <app-event-card [event]='event'></app-event-card>
     </div>
     <div *ngIf='events.length === 0'>
-      <p>No hay eventos...</p>
+      <p>{{'EVENT.NOT_EVENTS' | translate}}</p>
     </div>
   </div>
 </div>

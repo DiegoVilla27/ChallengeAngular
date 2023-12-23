@@ -1,16 +1,17 @@
 import { Injectable } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
 import Swal from "sweetalert2";
 
 @Injectable({
   providedIn: "root"
 })
 export class SweetalertService {
+  constructor(private _translateSvc: TranslateService) {}
+
   showLoading() {
     Swal.fire({
       allowOutsideClick: false,
-      showCloseButton: true,
-      icon: "info",
-      text: "Por favor, espera..."
+      showCloseButton: false
     });
     Swal.showLoading();
   }

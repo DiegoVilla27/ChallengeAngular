@@ -1,0 +1,15 @@
+{
+  "EVENT": {
+    "NOT_EVENTS": "No hay eventos...",
+    "PRICE": "Precio",
+    "BUTTON": "Quiero ir"
+  },
+  "FILTER": {
+    "ARTIST": "Buscar artista...",
+    "CITY": "Ciudad",
+    "DATE": "Fecha",
+    "CATEGORY": "Categoria",
+    "ALL": "Todos",
+    "BUTTON": "Buscar"
+  }
+}

@@ -4,14 +4,14 @@
       <input
         formControlName="artist"
         type="text"
-        placeholder="Buscar artista..."
+        placeholder="{{ 'FILTER.ARTIST' | translate }}"
       />
     </div>
     <div class="input">
       <input
         formControlName="city"
         type="text"
-        placeholder="Ciudad"
+        placeholder="{{ 'FILTER.CITY' | translate }}"
       />
       <img [src]="ICON_LOCATION" />
     </div>
@@ -19,7 +19,7 @@
       <input
         formControlName="date"
         [type]="typeCalendar"
-        placeholder="Fecha"
+        placeholder="{{ 'FILTER.DATE' | translate }}"
         (change)="typeCalendar = 'text'"
         (focus)="typeCalendar = 'date'"
         (blur)="typeCalendar = 'text'"
@@ -37,7 +37,7 @@
           selected
           hidden
         >
-          Categoria
+          {{ "FILTER.CATEGORY" | translate }}
         </option>
         <option
           *ngFor="let category of categories"
@@ -52,7 +52,7 @@
       type="submit"
       (click)="search()"
     >
-      Buscar
+      {{ "FILTER.BUTTON" | translate }}
     </button>
   </form>
 </div>
