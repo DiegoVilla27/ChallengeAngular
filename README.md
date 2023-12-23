@@ -55,5 +55,16 @@ Install & configure Husky (Git Hooks), Lint Staged (Commits Staged Linter), Comm
 
 > If Husky doesn't work on MacOS, run the command (Within the project): _`chmod ug+x .husky/*`_
 
+## Notes Developer
+He desarrollado/maquetado la lista que se pedía en la prueba basandome en los mockups de Adobe XD.
 
-> Developed By: __`Diego Villa`__. - Website: [https://www.cabuweb.com](https://www.cabuweb.com)
+Modularizando el filtro y los componentes (card), haciendo uso del grid de bootstrap, scss (mixins, variables), librerias de terceros (sweetalert para el loading).
+
+Para correr el proyecto por favor abrir 2 ventanas de la terminal... en una, ejecutar primero `npm run api:watch` (Si hay problemas al ejecutar, instalar `npm i -g json-server`) y en la otra `ng serve -o`.
+Es necesario los 2 pasos para poder correr el json-server y hacer las peticiones HTTP.
+
+Por último y no menos importante (lo hice como un plus) he integrado internacionalización _(i18n)_ al proyecto con los idiomas `Español` e `Inglés`.
+
+PDTA: Aquí dejo mi portafolio de trabajos freelance (todo lo he diseñado, maquetado y desarrollado yo, algunos proyectos están en Next, React, Angular, Ionic o React Native) -> [https://www.cabuweb.com](https://www.cabuweb.com)
+
+> Developed By: __`Diego Villa`__. - Website: [https://www.cabuweb.com](https://www.cabuweb.com) and Github [https://github.com/DiegoVilla27](https://github.com/DiegoVilla27)
