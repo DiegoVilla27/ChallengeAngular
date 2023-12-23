@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { IFormFilter } from "../../interfaces/article.interface";
+import { IFormFilter } from "../../interfaces/event.interface";
 
 @Component({
   selector: "app-filter",

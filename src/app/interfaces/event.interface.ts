@@ -1,4 +1,4 @@
-export interface IArticle {
+export interface IEvent {
   id: number;
   artist: string;
   city: string;

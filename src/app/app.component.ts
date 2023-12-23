@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
-import { IArticle, IFormFilter } from "./interfaces/article.interface";
-import { ArticlesService } from "./services/articles.service";
+import { IEvent, IFormFilter } from "./interfaces/event.interface";
+import { SweetalertService } from "./services/sweetalert.service";
+import { EventsService } from "./services/events.service";
 
 @Component({
   selector: "app-root",
@@ -8,18 +9,22 @@ import { ArticlesService } from "./services/articles.service";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  articles: IArticle[] = [];
+  events: IEvent[] = [];
   categories: string[] = [];
 
-  constructor(private _articleSvc: ArticlesService) {}
+  constructor(
+    private _eventSvc: EventsService,
+    private _saSvc: SweetalertService
+  ) {}
 
   ngOnInit(): void {
-    this.loadArticles();
+    this.loadEvents();
   }
 
-  loadArticles(): void {
-    this._articleSvc.getArticles().subscribe((articles: IArticle[]) => {
-      this.articles = articles;
+  loadEvents(): void {
+    this._saSvc.showLoading();
+    this._eventSvc.getEvents().subscribe((events: IEvent[]) => {
+      this.events = events;
       this.loadCategories();
     });
   }
@@ -27,13 +32,16 @@ export class AppComponent {
   loadCategories(): void {
     this.categories = [
       "Todos",
-      ...new Set(this.articles.map((article: IArticle) => article.category))
+      ...new Set(this.events.map((event: IEvent) => event.category))
     ];
+    this._saSvc.closeLoading();
   }
 
   search(filters: IFormFilter): void {
-    this._articleSvc
-      .getArticlesFilters(filters)
-      .subscribe((articles: IArticle[]) => (this.articles = articles));
+    this._saSvc.showLoading();
+    this._eventSvc.getEventsFilters(filters).subscribe((events: IEvent[]) => {
+      this.events = events;
+      this._saSvc.closeLoading();
+    });
   }
 }

@@ -1,0 +1,14 @@
+<article class='event'>
+  <img class='event_img' [src]="IMAGE_NOTFOUND" />
+  <div class='event_box'>
+    <h4>{{ event.artist }}</h4>
+    <p><img [src]="ICON_LOCATION" /> {{ event.city }}</p>
+    <div class='event_box_actions'>
+      <div class='event_box_actions_price'>
+        <p>Desde</p>
+        <p>{{ event.price | currency:'EUR':'symbol':'0.0-0' }}</p>
+      </div>
+      <button class='event_box_actions_button' type="button">Quiero ir</button>
+    </div>
+  </div>
+</article>

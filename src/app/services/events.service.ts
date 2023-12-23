@@ -1,23 +1,27 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, delay } from "rxjs";
 import { environment } from "../../environments/environment.development";
-import { IArticle, IFormFilter } from "../interfaces/article.interface";
+import { IEvent, IFormFilter } from "../interfaces/event.interface";
 
 @Injectable({
   providedIn: "root"
 })
-export class ArticlesService {
+export class EventsService {
   constructor(private _http: HttpClient) {}
 
-  getArticles(): Observable<IArticle[]> {
-    return this._http.get<IArticle[]>(`${environment.api_url}/articles`);
+  getEvents(): Observable<IEvent[]> {
+    return this._http
+      .get<IEvent[]>(`${environment.api_url}/events`)
+      .pipe(delay(1000));
   }
 
-  getArticlesFilters(filters: IFormFilter): Observable<IArticle[]> {
-    return this._http.get<IArticle[]>(
-      `${environment.api_url}/articles?${this.buildParams(filters)}`
-    );
+  getEventsFilters(filters: IFormFilter): Observable<IEvent[]> {
+    return this._http
+      .get<IEvent[]>(
+        `${environment.api_url}/events?${this.buildParams(filters)}`
+      )
+      .pipe(delay(1000));
   }
 
   private buildParams(filters: IFormFilter): string {
